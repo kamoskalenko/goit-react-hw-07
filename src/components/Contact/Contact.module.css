@@ -1,0 +1,29 @@
+.header {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.btn {
+  margin-top: 10px;
+  max-width: fit-content;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #c0392b;
+}
+
+.myIcon {
+  margin-right: 10px;
+}
