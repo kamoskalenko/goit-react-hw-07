@@ -16,7 +16,7 @@ const Contact = ({ item }) => {
       </h3>
       <p className={s.text}>
         <FaPhoneAlt className={s.myIcon} />
-        {item.phone}
+        {item.number}
       </p>
       <button
         className={s.btn}

@@ -9,7 +9,7 @@ const validationSchema = Yup.object().shape({
     .min(3, "Must be at least 3 characters")
     .max(50, "Must be 50 characters or less")
     .required("Required"),
-  phone: Yup.string()
+  number: Yup.string()
     .min(3, "Must be at least 3 characters")
     .max(15, "Must be 15 characters or less")
     .matches(
@@ -20,13 +20,13 @@ const validationSchema = Yup.object().shape({
 });
 
 const ContactForm = () => {
-  const initialValues = { name: "", phone: "" };
+  const initialValues = { name: "", number: "" };
   const dispatch = useDispatch();
 
   const handleSubmit = (values, options) => {
     const newContact = {
       name: values.name,
-      phone: values.phone,
+      number: values.number,
     };
 
     dispatch(addContact(newContact));
@@ -48,9 +48,9 @@ const ContactForm = () => {
           </div>
 
           <div>
-            <label htmlFor="phone">Phone</label>
-            <Field name="phone" type="tel" id="phone" />
-            <ErrorMessage name="phone" component="p" />
+            <label htmlFor="number">Phone</label>
+            <Field name="number" type="tel" id="number" />
+            <ErrorMessage name="number" component="p" />
           </div>
 
           <button type="submit" className="btn-submit">
